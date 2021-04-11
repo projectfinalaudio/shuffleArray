@@ -29,17 +29,34 @@ function editFourthCar() {
     = cars;
 };
 
-function randomiseCollection() {
-  for (let i = cars.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      const temp = cars[i];
-      cars[i] = cars[j];
-      cars[j] = temp;
-  }
-  return cars;
+displayCars();
 
+function hideCars() {
+    var visible = document.querySelectorAll("#cars");
+    var visible_button = document.querySelectorAll("#button-container-1");
+
+
+    for (invisible=0; invisible<visible.length; invisible++) {
+        visible[invisible].style.display = "none";
+    };
+    for (invisible=0; invisible<visible.length; invisible++) {
+        visible_button[invisible].style.display = "none";
+    };   
+};
+
+function showCars() {
+    var visible = document.querySelectorAll("#cars");
+    var visible_button = document.querySelectorAll("#button-container-1");
+
+
+    for (invisible=0; invisible<visible.length; invisible++) {
+        visible[invisible].style.display = "block";
+    };
+    for (invisible=0; invisible<visible.length; invisible++) {
+        visible_button[invisible].style.display = "block";
+    };   
 };
 
 
 
-displayCars();
+
